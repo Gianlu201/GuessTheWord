@@ -24,6 +24,116 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <main class="container">
+      <section
+        class="d-flex justify-content-center gap-5 align-items-center mt-5"
+      >
+        <article id="hangmanCanva">
+          <svg
+            id="hangman"
+            width="150"
+            height="300"
+            viewBox="0 0 291 669"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="Component 1">
+              <circle
+                id="hangmanHead"
+                opacity="0"
+                cx="143"
+                cy="64"
+                r="63"
+                stroke="black"
+                stroke-width="2"
+              />
+              <line
+                id="hangmanBody"
+                opacity="0"
+                x1="146"
+                y1="128"
+                x2="146"
+                y2="437"
+                stroke="black"
+                stroke-width="6"
+              />
+              <line
+                id="hangmanRArm"
+                opacity="0"
+                x1="144.061"
+                y1="129.061"
+                x2="1.06066"
+                y2="272.061"
+                stroke="black"
+                stroke-width="3"
+              />
+              <line
+                id="hangmanLArm"
+                opacity="0"
+                y1="-1.5"
+                x2="202.233"
+                y2="-1.5"
+                transform="matrix(0.707107 0.707107 0.707107 -0.707107 148 128)"
+                stroke="black"
+                stroke-width="3"
+              />
+              <line
+                id="hangmanRLeg"
+                opacity="0"
+                x1="144.416"
+                y1="433.494"
+                x2="62.4163"
+                y2="668.494"
+                stroke="black"
+                stroke-width="3"
+              />
+              <line
+                id="hangmanLLeg"
+                opacity="0"
+                y1="-1.5"
+                x2="248.896"
+                y2="-1.5"
+                transform="matrix(0.329455 0.944171 0.944171 -0.329455 148 433)"
+                stroke="black"
+                stroke-width="3"
+              />
+            </g>
+          </svg>
+        </article>
+
+        <article id="word" class="d-flex gap-3">
+          <span
+            class="d-block text-center display-6 fw-bold border-bottom border-1 border-secondary"
+            >&nbsp;</span
+          >
+          <span
+            class="d-block text-center display-6 fw-bold border-bottom border-1 border-secondary"
+            >&nbsp;</span
+          >
+          <span
+            class="d-block text-center display-6 fw-bold border-bottom border-1 border-secondary"
+            >&nbsp;</span
+          >
+          <span
+            class="d-block text-center display-6 fw-bold border-bottom border-1 border-secondary"
+            >&nbsp;</span
+          >
+        </article>
+      </section>
+
+      <section
+        id="letters"
+        class="container d-flex justify-content-center gap-4 mt-5"
+      >
+        <!-- <button class="letter" value="a">A</button>
+        <button class="letter" value="w">W</button>
+        <button class="letter" value="o">O</button>
+        <button class="letter" value="r">R</button>
+        <button class="letter" value="d">D</button>
+        <button class="letter" value="f">F</button> -->
+      </section>
+    </main>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
