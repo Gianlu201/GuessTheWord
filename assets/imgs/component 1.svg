@@ -1,0 +1,10 @@
+<svg width="291" height="669" viewBox="0 0 291 669" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Component 1">
+<circle id="Ellipse 1" cx="143" cy="64" r="63" stroke="white" stroke-width="2"/>
+<line id="Line 1" x1="146" y1="128" x2="146" y2="437" stroke="white" stroke-width="6"/>
+<line id="Line 2" x1="144.061" y1="129.061" x2="1.06066" y2="272.061" stroke="white" stroke-width="3"/>
+<line id="Line 3" y1="-1.5" x2="202.233" y2="-1.5" transform="matrix(0.707107 0.707107 0.707107 -0.707107 148 128)" stroke="white" stroke-width="3"/>
+<line id="Line 4" x1="144.416" y1="433.494" x2="62.4163" y2="668.494" stroke="white" stroke-width="3"/>
+<line id="Line 5" y1="-1.5" x2="248.896" y2="-1.5" transform="matrix(0.329455 0.944171 0.944171 -0.329455 148 433)" stroke="white" stroke-width="3"/>
+</g>
+</svg>
