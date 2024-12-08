@@ -25,9 +25,10 @@ const alphabet = [
   'v',
   'z',
 ];
-const sectLetters = document.getElementById('letters');
-const spaces = document.querySelectorAll('#word > span');
-const btnLetters = document.querySelectorAll('#letters button');
+const artWord = document.getElementById('word');
+const artLetters = document.getElementById('letters');
+let spaces;
+let btnLetters;
 let error = 0;
 
 window.addEventListener('load', init());
@@ -35,7 +36,6 @@ window.addEventListener('load', init());
 function init() {
   word = words[Math.floor(Math.random() * words.length)];
   maxScore = word.length;
-  // TODO implementare funzione per mostrare spazi lettere della parola
   showWordSpaces(word);
   showButtons(word);
 }
@@ -46,18 +46,41 @@ function init() {
 //   });
 // });
 
-function showButtons(myWord) {
+function showWordSpaces(myWord) {
   for (let i = 0; i < myWord.length; i++) {
+    const mySpan = document.createElement('span');
+    mySpan.classList.add(
+      'd-block',
+      'text-center',
+      'display-6',
+      'fw-bold',
+      'border-bottom',
+      'border-1',
+      'border-secondary'
+    );
+    mySpan.innerHTML = '&nbsp;';
+
+    artWord.appendChild(mySpan);
+  }
+
+  spaces = document.querySelectorAll('#word > span');
+}
+
+function showButtons(myWord) {
+  const myStr = randomLetters(myWord);
+  for (let i = 0; i < myStr.length; i++) {
     const myBtn = document.createElement('button');
     myBtn.classList.add('letter');
-    myBtn.value = myWord[i];
-    myBtn.innerText = myWord[i].toUpperCase();
+    myBtn.value = myStr[i];
+    myBtn.innerText = myStr[i].toUpperCase();
     myBtn.addEventListener('click', function () {
       checkLetter(myBtn.value);
+      myBtn.setAttribute('disabled', 'true');
     });
 
-    sectLetters.appendChild(myBtn);
+    artLetters.appendChild(myBtn);
   }
+  btnLetters = document.querySelectorAll('#letters button');
 }
 
 function checkLetter(value) {
@@ -73,6 +96,40 @@ function checkLetter(value) {
   }
   error++;
   updateError(error);
+}
+
+function randomLetters(myWord) {
+  const totalLetters = 14 - myWord.length;
+  let myArr = myWord.split('');
+  let myAlphabet = updateAlphabet(myWord, alphabet);
+  for (let i = 0; i < totalLetters; i++) {
+    const myLetter = myAlphabet[Math.floor(Math.random() * myAlphabet.length)];
+    myArr.push(myLetter);
+    myAlphabet = updateAlphabet(myLetter, myAlphabet);
+  }
+  console.log(myArr);
+  return randomiseLetters(myArr);
+}
+
+function updateAlphabet(str, myAlphabet) {
+  let myAlph = [...myAlphabet];
+  for (let i = 0; i < str.length; i++) {
+    const index = myAlph.indexOf(str[i]);
+    myAlph.splice(index, 1);
+  }
+  return myAlph;
+}
+
+function randomiseLetters(arr) {
+  const range = arr.length;
+  const randomisedArr = [];
+  for (let i = 0; i < range; i++) {
+    const index = Math.floor(Math.random() * arr.length);
+    randomisedArr.push(arr[index]);
+    arr.splice(index, 1);
+  }
+  console.log(randomisedArr.join(''));
+  return randomisedArr.join('');
 }
 
 function updateError(myError) {
