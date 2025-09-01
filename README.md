@@ -1,6 +1,6 @@
-# Guess Word
+# Guess The Word
 
-**Guess Word** è un semplice gioco dell'impiccato realizzato con **HTML**, **CSS** e **JavaScript**. Il progetto è nato durante le prime fasi del mio apprendimento del web per mettere in pratica le basi di markup, styling e programmazione client-side.
+**Guess The Word** è un semplice gioco dell'impiccato realizzato con **HTML**, **CSS** e **JavaScript**. Il progetto è nato durante le prime fasi del mio apprendimento del web per mettere in pratica le basi di markup, styling e programmazione client-side.
 
 ---
 
