@@ -68,8 +68,8 @@ Guess_Word/
 ## Installazione e avvio
 1. Clona la repository:
 ```bash
-git clone https://github.com/Gianlu201/Guess_Word.git
-cd Guess_Word
+git clone https://github.com/Gianlu201/GuessTheWord.git
+cd GuessTheWord
 ```
 2. Apri `index.html` nel browser (doppio click) oppure usa un server statico:
 ```bash
